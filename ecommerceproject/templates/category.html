@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block metaDescription %}
+      {% if category %}
+            {{category.description|truncatewords:150 }}
+      {% else %}
+          welcome to E-Cart choose another product
+      {% endif %}
+{% endblock %}
+{% block title %}
+    {% if category %}
+        {{category.name}}
+    {% else %}
+        See our new collections
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+  {% if category %}
+    <div class="container">
+        <div class="row my_row">
+            <div class="mx-auto">
+                <p><a href="{% url 'ecommerceapp:allProdCat' %}">All products</a> </p>
+            </div>
+        </div>
+    </div>
+  {% endif %}
+<div class="mx_auto">
+  {% if category %}
+    <img class="my_image" src="{{category.image.url}}" alt="{{category.name}}">
+    </div>
+    <br>
+    <div>
+       <h1 class="text-center my_title">{{category.name}}</h1>
+        <p class="text-cat">{{category.description}}</p>
+    </div>
+  {% else %}
+    <div>
+      <img class="my_image my_image_padding" src="{% static 'img/banner.png' %}" alt="our products" width="1650px" height="800px">
+    </div>
+{% endif %}
+    <br>
+    <div>
+      <p class="p_graph">Top brands for Phones and Electronics.<br>
+          Latest trends in Fashion.<br>
+          Free Shipping available* Choose from a vast selection of the best quality products.
+          100% Purchase protection.<br>
+          Pay On Delivery. 100% Purchase Protection.<br>
+          Free Shipping* Easy Returns.<br>
+          Huge Selection. </p>
+    </div>
+
+
+<div class="container">
+  <div class="row mx_auto">
+    {% for product in products.object_list %}
+    <div class="my_bottom_margin col-9 col-sm-12 col-md-4 col-lg-4">
+      <div class="card text-center" style="min-width:10rem;">
+        <a href="{{product.get_url}}"><img
+               class="card-img-top" src="{{product.image.url}}" alt="{{product.name}}"></a>
+          <div  class="card-body">
+             <h4 class="card-title">{{product.name}}</h4>
+             <p class="card-text">INR: {{product.price}}/-</p>
+<!--            <a href="#" class="btn btn-primary">add to cart</a>-->
+          </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+    <div class="mx-auto">
+        {% if product.paginator.num_pages > 1 %}
+
+
+        <hr>
+        <div class="text-center">
+            {% for pg in product.paginator.page_range %}
+                <a href="?page={{pg}}" class="btn bn-light btn-sm {% if product.number == pg %} active {%endif %}">{{pg}}</a>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+    <br>
+</div>
+
+{% endblock %}

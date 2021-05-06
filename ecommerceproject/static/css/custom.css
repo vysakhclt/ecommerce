@@ -1,0 +1,152 @@
+.body{
+    font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+/*** navbar ***/
+.nav-item{
+    letter-spacing: 0.2em;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.dropdown-item{
+    letter-spacing: 0.2em;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.my_footer{
+    background-color: #666699;
+    height:60px;
+}
+.my_footer p{
+    padding-top: 20px;
+    font-size: 14px;
+}
+
+/*** category page ***/
+.my_row{
+    padding-top:15px;
+    padding-bottom:15px;
+}
+.my_row . mx_auto{
+    color: #666699;
+    font-size:12px;
+}
+.my_image{
+    width:100%;
+    height:auto;
+}
+. my_tile{
+    font-size:16px;
+    text_transform:uppercase;
+    letter-spacing:2em;
+
+}
+
+.my_image_padding{
+    padding:5px;
+
+}
+.p_graph{
+    text-align:center;
+    background-color:#8585ad;
+}
+
+.my_bottom_margin{
+    margin-bottom:5px;
+
+}
+
+.text-cat{
+    text-align:center;
+}
+.card-img-top {
+    width: 100%;
+    height: 20vw;
+    object-fit: cover;
+}
+/*** productclass ***/
+
+.my_row_prod_row_class{
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+.my_prod_row_class .mx_auto{
+    color: black;
+    font-size:12px;
+    text-decoration:non;
+}
+
+.my_prod_title{
+    color:white;
+    font-size:25px;
+    text-transform:uppercase;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+.my_prod_text{
+    padding-top:5px;
+    padding-bottom:5px;
+
+}
+.my_prod_price{
+    color:red;
+    font-size:20px;
+}
+
+.img_prod{
+    border-width:2px;
+    border-style:solid;
+    width:250px;
+    height:300px;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.prod_description{
+    font-family:Monospace;
+    font-size:10px;
+    padding-bottom:5px;
+}
+
+.my_search_text{
+    padding-top:20px;
+}
+
+/*** cartpage ***/
+
+.my_custom_table{
+    min-width:400px;
+    font-size:14px;
+}
+.my_custom_thead{
+    font-weight:normal;
+    text_transform:uppercase;
+    letter-spacing:.2em;
+    background-color:#8585ad!important;
+}
+.custom_a{
+    text-decoration:none;
+}
+.custom_icon{
+    text-decoration:none;
+    color:#1f1f2e !important;
+}
+.my_custom_button{
+    margin-top:5px;
+}
+.my_custom_thead{
+    text_transform:uppercase;
+}
+
+.custom_image{
+    border-width:2px;
+    border-style:solid;
+    width:250px;
+    height:300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
